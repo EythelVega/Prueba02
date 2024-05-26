@@ -81,17 +81,16 @@ namespace Prueba02.Areas.Identity.Pages.Account
 
             [Required]
             [Display(Name = "Matricula")]
-            public int? Matricula { get; set; }
+            public int Matricula { get; set; }
 
 
-
-
-            [StringLength(50, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+            [Required]
+            [StringLength(50, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 3)]
             public string Nombre {  get; set; }
 
 
-
-            [StringLength(50, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+            [Required]
+            [StringLength(50, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 3)]
             public string Apellido { get; set; }
 
 
