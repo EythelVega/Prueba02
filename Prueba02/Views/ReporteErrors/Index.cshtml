@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Prueba02.Models.dbModels.ReporteError>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CorreoElectronico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PasosParaReproducirError)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UrlPaginaError)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaError)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CorreoElectronico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PasosParaReproducirError)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UrlPaginaError)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaError)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdReporteError">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdReporteError">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdReporteError">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
