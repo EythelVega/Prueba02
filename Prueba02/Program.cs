@@ -15,6 +15,9 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole<int>>(options => opti
             .AddDefaultUI()
             .AddDefaultTokenProviders();
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
+
+
 
 var app = builder.Build();
 
